@@ -1,0 +1,29 @@
+<h1>Listing tssks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Detail</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tssks.each do |tssk| %>
+      <tr>
+        <td><%= tssk.title %></td>
+        <td><%= tssk.detail %></td>
+        <td><%= link_to 'Show', tssk %></td>
+        <td><%= link_to 'Edit', edit_tssk_path(tssk) %></td>
+        <td><%= link_to 'Destroy', tssk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tssk', new_tssk_path %>

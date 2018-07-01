@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tssk.title %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @tssk.detail %>
+</p>
+
+<%= link_to 'Edit', edit_tssk_path(@tssk) %> |
+<%= link_to 'Back', tssks_path %>

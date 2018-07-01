@@ -1,0 +1,25 @@
+<%= form_for(@tssk) do |f| %>
+  <% if @tssk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tssk.errors.count, "error") %> prohibited this tssk from being saved:</h2>
+
+      <ul>
+      <% @tssk.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :detail %><br>
+    <%= f.text_field :detail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
